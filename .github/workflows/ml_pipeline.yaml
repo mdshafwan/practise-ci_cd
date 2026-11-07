@@ -35,5 +35,5 @@ jobs:
 
     - name: 5.train
       run: python src/train.py
-    # - name: Test with pytest
-    #   run:
+    - name: 6.Test with pytest
+      run: pytest tests

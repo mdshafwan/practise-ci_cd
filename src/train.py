@@ -9,11 +9,13 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler,OneHotEncoder
 from sklearn.metrics import accuracy_score,f1_score,recall_score
 import optuna
+import joblib
 
 os.environ['MLFLOW_ALLOW_FILE_STORE'] = 'true'
 
 def train():
     mlflow.set_tracking_uri('file:./ml_runs')
+    # mlflow.set_tracking_uri('http://127.0.0.1:5000')
     mlflow.set_experiment('experiment')
 
     data_path = "data/customer_churn_dataset-testing-master.csv"
@@ -65,5 +67,9 @@ def train():
         mlflow.log_metrics({"acc":acc,"f1":f1,"recall":recall})
         mlflow.log_params(study.best_params)
 
+    joblib.dump(preprocess,'preprocess.pkl')
+    joblib.dump(best_model,'best_model.pkl')
+    joblib.dump((x_test,y_test),'set.pkl')
+    
 if __name__ == "__main__":
     train()
