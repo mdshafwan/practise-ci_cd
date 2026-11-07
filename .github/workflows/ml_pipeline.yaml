@@ -33,5 +33,7 @@ jobs:
     - name: 4.validate
       run: python src/validate.py
 
+    - name: 5.train
+      run: python src/train.py
     # - name: Test with pytest
     #   run:
