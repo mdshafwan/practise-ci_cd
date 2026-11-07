@@ -10,6 +10,7 @@ from sklearn.preprocessing import StandardScaler,OneHotEncoder
 from sklearn.metrics import accuracy_score,f1_score,recall_score
 import optuna
 import joblib
+import pytest
 
 os.environ['MLFLOW_ALLOW_FILE_STORE'] = 'true'
 
