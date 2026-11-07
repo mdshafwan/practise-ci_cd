@@ -10,7 +10,7 @@ from sklearn.preprocessing import StandardScaler,OneHotEncoder
 from sklearn.metrics import accuracy_score,f1_score,recall_score
 import optuna
 
-os.environ['MLFLOW_FILE_STORE'] = 'true'
+os.environ['MLFLOW_ALLOW_FILE_STORE'] = 'true'
 
 def train():
     mlflow.set_tracking_uri('file:./ml_runs')
