@@ -3,9 +3,9 @@ import pandas as pd
 
 def validate():
 
-    df = pd.read_csv('src/customer_churn_dataset-testing-master.csv')
+    df = pd.read_csv('data/customer_churn_dataset-testing-master.csv')
     
-    if not os.path.exists('src/customer_churn_dataset-testing-master.csv'):
+    if not os.path.exists('data/customer_churn_dataset-testing-master.csv'):
         print("the dataset was not exist")
         exit(1)
 
