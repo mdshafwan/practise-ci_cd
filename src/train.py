@@ -12,7 +12,7 @@ from sklearn.metrics import accuracy_score,f1_score,recall_score,precision_score
 import joblib
 
 os.environ['MLFLOW_ALLOW_FILE_STORE'] = 'true'
-mlflow.set_tracking_uri('file:./mlrun')
+mlflow.set_tracking_uri('file:./mlruns')
 mlflow.set_experiment('practise')
 
 df = pd.read_csv('data/customer_churn_dataset-testing-master.csv')
