@@ -35,5 +35,8 @@ jobs:
     - name: 5.training_modeule
       run: python src/train.py
 
-    - name: Test with pytest
+    - name: 6.Test with pytest
       run: pytest tests
+
+    - name: 7.Evalution
+      run: python src/validate.py
