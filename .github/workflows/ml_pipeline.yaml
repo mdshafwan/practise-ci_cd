@@ -39,4 +39,4 @@ jobs:
       run: pytest tests
 
     - name: 7.Evalution
-      run: python src/validate.py
+      run: python src/evaluate.py
