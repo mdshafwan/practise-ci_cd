@@ -35,6 +35,5 @@ jobs:
     - name: 5.training_modeule
       run: python src/train.py
 
-    # - name: Test with pytest
-    #   run: |
-    #     pytest
+    - name: Test with pytest
+      run: pytest tests
